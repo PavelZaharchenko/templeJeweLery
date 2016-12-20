@@ -1,0 +1,277 @@
+// Our history
+.our-history{
+	font-size: 0;
+	display: flex;
+	align-items: center;
+	padding: 20px 0;
+	.history,
+	.scients {
+		width: @containerWidth/2;
+		box-sizing: border-box;
+		padding-right: 100px;
+	}
+	.scients{
+		p{
+			color: @colorGreyText;
+			font-size: 14px;
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+// How it work
+.how-work {
+	border-top: 1px solid @colorGreyText;
+	padding: 50px 0 20px;
+	h1{
+		.h1-style;
+	}
+	h4{
+		.h4-style;
+	}
+	.columns-box {
+		.column{
+			.icon {
+				background: center no-repeat;
+				width: 35px;
+				height: 35px;
+				margin-bottom: 15px;
+			}
+			.shape1{
+				background-image: url(imgs/shape1.png);
+			}
+			.shape2{
+				background-image: url(imgs/shape2.png);
+			}
+			.shape3{
+				background-image: url(imgs/shape3.png);
+			}
+			.shape4{
+				background-image: url(imgs/shape4.png);
+			}
+			.shape5{
+				background-image: url(imgs/shape5.png);
+			}
+			.shape6{
+				background-image: url(imgs/shape6.png);
+			}
+		}
+	}
+}
+
+// банер с кольцом
+.banner {
+	background-color: @colorSlider;
+	position: relative;
+	.container {
+		display: flex;
+		align-items: center;
+		padding: 75px 0;
+	}
+	.ring,
+	.description {
+		width: @containerWidth/2;
+		box-sizing: border-box;
+	}
+	.ring {
+		height: 210px;
+		background: url(imgs/ring.png) no-repeat center;
+	}
+	h1 {
+		font-weight: bold;
+		font-size: 22px;
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			width: 36px;
+			height: 5px;
+			background: url(imgs/ornament.png) center no-repeat;
+			position: absolute;
+			top: 35px;
+		}
+	}
+	p {
+		margin: 35px 0;
+		color: @colorGreyText;
+	}
+	.button-style {
+		background: darken(@colorSlider, 15%);
+		color: @colorLitleText;
+		display: inline-block;
+		font-size: 16px;
+		border: 1px solid @colorLogo;
+		padding: 5px;
+		cursor: pointer;
+		&:hover{
+			color: white;
+			background-color: @colorBtn;
+			border: 1px solid @colorBtn;
+		}
+	}
+	.slider-button {
+		width: 42px;
+		height: 42px;
+		position: absolute;
+		top: 50%;
+		margin-top: -21px;
+	}
+	.prev {
+		background: url(imgs/back.png);
+		left: 0;
+	}
+	.next {
+		background: url(imgs/fwd.png);
+		right: 0;
+	}
+}
+// после банера
+.second-section {
+	padding: 25px 0;
+	display: flex;
+	align-items: center;
+	.choosewe {
+		width: 200px;
+		padding-right: 100px;
+	}
+	.colum {
+		width: 500px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.column {
+		display: inline-block;
+		width: 230px;
+		padding: 0 10px; 
+		vertical-align: top;
+		&:nth-child(1),
+		&:nth-child(2){
+			margin-bottom: 30px;
+		}
+		h2{
+			font-weight: bold;
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		p{
+			font-size: 16px;
+			color:@colorLitleText;
+		}
+	}
+}
+
+// Блок с кольцами
+.ring-block{
+	padding: 50px 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	h1{
+		margin-left: 40px;
+		width: 170px;
+	}
+}
+.jevelery {
+	width: @containerWidth/4;
+	height: @containerWidth/4;
+	cursor: pointer;
+	background: pink;
+	box-shadow: inset 0px 0px 50px 0px rgba(0,0,0,0.4);
+	&:hover{
+		box-shadow: inset 0px 0px 50px 0px rgba(255,0,0,0.4);
+	}
+	background: center no-repeat;
+	&:first-child {
+		background-image: url(imgs/ring1.png);
+	}
+	&:nth-child(2) {
+		background-image: url(imgs/ring2.png);
+	}
+	&:nth-child(3) {
+		background-image: url(imgs/ring3.png);
+	}
+	&:nth-child(4) {
+		background-image: url(imgs/ring4.png);
+	}
+	&:nth-child(5) {
+		background-image: url(imgs/ring5.png);
+	}
+	&:nth-child(6) {
+		background-image: url(imgs/ring6.png);
+	}
+}
+
+// Comments block
+.comments{
+	background-color: @colorSlider;
+	padding: 50px 0 30px;
+	h1{
+		.h1-style;
+	}
+	h4{
+		.h4-style;
+	}
+	.column {
+		h2{
+			padding-left: 30px;
+			position: relative;
+			&:before {
+				content: '';
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: @colorBtn url(imgs/quotes.png) center no-repeat;
+				position: absolute;
+				left: 0;
+				// top: 5px;
+			}
+		}
+		h3 {
+			margin-bottom: 10px;
+			color: @colorGreyText;
+		}
+		h3,
+		p {
+			padding-left: 30px;
+		}
+	}
+}
+
+// фото блок
+.photo-block {
+	padding: 50px 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-end;
+	h1{
+		width: @containerWidth/2;
+	}
+}
+.picture {
+	width: @containerWidth/4;
+	height:@containerWidth/4;
+	background: center no-repeat;
+	background-size: 100%;
+	&:first-child {
+		background-image: url(imgs/pic1.png);
+	}
+	&:nth-child(2) {
+		background-image: url(imgs/pic2.png);
+	}
+	&:nth-child(3) {
+		background-image: url(imgs/pic3.png);
+	}
+	&:nth-child(4) {
+		background-image: url(imgs/pic4.png);
+	}
+	&:nth-child(6) {
+		background-image: url(imgs/pic5.png);
+	}
+	&:nth-child(7) {
+		background-image: url(imgs/pic6.png);
+	}
+}s

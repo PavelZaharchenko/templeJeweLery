@@ -1,0 +1,66 @@
+footer {
+	background: #242424;
+	padding: 30px 0;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 50px;
+	}
+	.top-menu {
+		display: flex;
+		justify-content: space-between;
+	}
+	.menu {
+		a {
+			width: 13px;
+			height: 13px;
+		}
+		.facebook {
+			background-image: url(imgs/fb.png);
+			&:hover {
+				background-image: url(imgs/fbw.png);
+			}
+		}
+		.twitter {
+			background-image: url(imgs/twb.png);
+			&:hover {
+				background-image: url(imgs/tww.png);
+			}
+		}
+		.ball {
+			background-image: url(imgs/dr.png);
+			&:hover {
+				background-image: url(imgs/drw.png);
+			}
+		}
+		.google {
+			background-image: url(imgs/gb.png);
+			&:hover {
+				background-image: url(imgs/gw.png);
+			}
+		}
+	}
+	ul {
+		display: inline-block;
+		li {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+			a {
+				text-decoration: none;
+				color: @colorGreyText;
+				&:hover {
+					color: @colorBtn;
+				}
+			}
+		}
+	}
+	.footbrowse {
+		margin-right: 50px;
+	}
+	.copyright {
+		color: @colorGreyText;
+		width: 160px;
+		text-align: right;
+	}
+}

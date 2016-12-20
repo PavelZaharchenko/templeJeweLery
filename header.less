@@ -1,0 +1,74 @@
+// Шапка
+header{
+	font-size: 0px;
+	background: url(imgs/bg.png) center;
+	.wrapper {
+		height: 417px;
+		background-color: fadeout(@colorBlack, 50%);
+	}
+	.top-menu{
+		background: linear-gradient(to bottom, @colorBlack, transparent);
+		.container {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	.menu {
+		li {
+			color: @colorLogo;
+			font-size: 16px;
+		}
+		a {
+			color: @colorLogo;
+			&:hover {
+				color: @colorBtn;
+			}
+		}
+		.facebook,
+		.twitter {
+			width: 10px;
+			height: 13px;
+		}
+		.facebook {
+			background-image: url(imgs/facebook-nav.png);
+			&:hover {
+				background-image: url(imgs/facebook-nav2.png);
+			}
+		}
+		.twitter {
+			background-image: url(imgs/twitter-nav.png);
+			&:hover {
+				background-image: url(imgs/twitter-nav2.png);
+			}
+		}
+	}
+	p{
+		color: @colorLogo;
+	}
+	.creating {
+		font-size: 16px;
+		margin-top: 100px;
+	}
+	.workshop {
+		font-size: 30px;
+		text-transform: uppercase;
+		margin: 20px 0;
+		width: 300px;
+	}
+	.button-style{
+		color: @colorLogo;
+		display: inline-block;
+		font-size: 16px;
+		border: 1px solid @colorLogo;
+		padding: 5px;
+		cursor: pointer;
+		// margin-left: 95px;
+		&:not(:last-child){
+			margin-right: 20px;
+		}
+		&:hover{
+			background-color: @colorBtn;
+			border: 1px solid @colorBtn;
+		}
+	}
+}

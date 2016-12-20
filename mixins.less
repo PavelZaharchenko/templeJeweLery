@@ -1,0 +1,129 @@
+// переменные:
+@colorSlider: #F7F7F7;
+@colorBtn: #FF0000;
+@colorLogo: #FFFFFF;
+@colorText: #696969;
+@colorh: #000000;
+@colorGreyText: #808080;
+@colorLitleText: #A9A9A9;
+@colorBlack: rgba(0, 0, 0, 1);
+@containerWidth: 800px;
+// (rgba(0, 0, 0, 1) прозрачность)
+
+*{
+	transition: all .3s;
+}
+.container {
+	max-width: @containerWidth;
+	margin: auto;
+}
+// Mixins
+.h1-style {
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+	position: relative;
+	margin-bottom: 20px;
+	&:before{
+		content: '';
+		display: inline-block;
+		width: 36px;
+		height: 5px;
+		background: url(imgs/ornament.png) center no-repeat;
+		position: absolute;
+		top: 45px;
+		left: 50%;
+		margin-left: -18px;
+	}
+}
+.h4-style {
+	padding: 18px;
+	font-size: 16px;
+	margin: auto;
+	text-align: center;
+	color: @colorGreyText;
+	width: 315px;
+	margin-bottom: 40px;
+}
+
+.logo{
+	font-size: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: @colorLogo;
+}
+.top-menu {
+	height: 50px;
+	line-height: 50px;
+}
+
+.menu {
+	li {
+		display: inline-block;
+		&:not(:last-child){
+			margin-right: 10px;
+		}
+	}
+	a {
+		text-decoration: none;
+		display: inline-block;
+		background: center no-repeat;
+		&:not(:last-child){
+			margin-right: 10px;
+		}
+	}
+}
+
+.block-title {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: #242424;
+}
+
+.h1-ornament {
+	position: relative;
+	&:before{
+		content: '';
+		display: inline-block;
+		width: 36px;
+		height: 5px;
+		background: url(imgs/ornament.png) center no-repeat;
+		position: absolute;
+		top: 125px;
+	}
+}
+
+.columns-box {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	.column {
+		width: 250px;
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(1) {
+			margin-bottom: 30px;
+		}
+		h2 {
+			color: @colorh;
+			font-weight: bold;
+			font-size: 20px;
+			margin-bottom: 15px;
+		}
+		p{
+			color: @colorGreyText;
+		}
+	}
+}
+
+.text {
+	display: flex;
+	margin-top: 50px;
+	p {
+		width: @containerWidth/2;
+		box-sizing: border-box;
+		padding-right: 50px;
+		color: @colorText;
+	}
+}
